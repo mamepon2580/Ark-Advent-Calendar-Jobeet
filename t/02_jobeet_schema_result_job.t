@@ -5,6 +5,8 @@ use Test::More;
 use Jobeet::Test;
 use Jobeet::Models;
 
+use Test::More tests => 4;
+
 {
     my $new_category = models('Schema::Category')->create({ name => 'Programming' });
     my $new_job = $new_category->add_to_jobs({
