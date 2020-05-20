@@ -13,7 +13,11 @@
         <div class="feed">
           <a href="">Feed</a>
         </div>
-        <h1><?= $category->name ?></h1>
+        <h1>
+          <a href="<?= $c->uri_for('/category', $category->slug) ?>">
+            <?= $category->name ?>
+          </a>
+        </h1>
       </div>
 
       <table class="jobs">
@@ -31,8 +35,18 @@
               <?= $job->company ?>
             </td>
           </tr>
+
 ? } #endfor $job
       </table>
+
+? my $count = $category->get_active_jobs->count;
+? if ( (my $rest = $count - $max_rows) > 0 ) {
+      <div class="more_jobs">
+        and <a href="<?= $c->uri_for('/category', $category->slug) ?>"><?= $rest ?></a>
+        more...
+      </div>
+? } # endif
+
     </div>
 ? } #endfor $category
 </div>
