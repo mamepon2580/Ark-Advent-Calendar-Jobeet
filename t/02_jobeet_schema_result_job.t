@@ -1,11 +1,9 @@
 use strict;
 use warnings;
-use Test::More;
+use Test::More tests => 4;
 
 use Jobeet::Test;
 use Jobeet::Models;
-
-use Test::More tests => 4;
 
 {
     my $new_category = models('Schema::Category')->create({ name => 'Programming' });
@@ -32,5 +30,6 @@ use Test::More tests => 4;
 
     isa_ok $new_job->expires_at, 'DateTime';
 }
+
 
 done_testing;

@@ -46,3 +46,5 @@ use DateTime;
         is models('Schema::Category')->get_with_jobs->count, 0, 'get_with_jobs: expired job is not appeared';
     }
 }
+
+done_testing;
