@@ -25,4 +25,19 @@ sub create_from_form {
     $job;
 }
 
+sub search_fulltext {
+    my ($self, $word) = @_;
+
+    my $r = $self->search(
+        {
+            is_activated => 1,
+            -or          => [
+                { description  => { -like => "%${word}%", } },
+                { how_to_apply => { -like => "%${word}%", } },
+            ]
+        },
+        { order_by => { -desc => 'created_at' }, rows => 20 }
+    );
+}
+
 1;

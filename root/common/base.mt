@@ -24,8 +24,8 @@
 
             <div class="search">
               <h2>Ask for a job</h2>
-              <form action="" method="get">
-                <input type="text" name="keywords"
+              <form action="<?= $c->uri_for('/search') ?>" method="get">
+                <input type="text" name="q"
                   id="search_keywords" />
                 <input type="submit" value="search" />
                 <div class="help">
@@ -33,6 +33,7 @@
                 </div>
               </form>
             </div>
+            
           </div>
         </div>
       </div>
