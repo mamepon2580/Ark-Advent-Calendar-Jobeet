@@ -16,3 +16,5 @@ requires 'Data::Page::Navigation';
 requires 'Test::More';
 requires 'CGI::Simple';
 requires 'Cache::FastMmap';
+requires 'Ark::Plugin::I18N';
+requires 'Locale::Maketext::Lexicon';
