@@ -2770,3 +2770,25 @@ C<EXE_FILES: >
 
 =back
 
+=head2 Thu May 21 03:07:42 2020: C<Module> L<Cache::FastMmap|Cache::FastMmap>
+
+=over 4
+
+=item *
+
+C<installed into: /home/akipaka/Work/Jobeet/local/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 1.49>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
