@@ -1,8 +1,4 @@
 ? my $category = $c->stash->{category};
-
-? extends 'common/base';
-
-? my $category = $c->stash->{category};
 ? my $jobs     = $c->stash->{jobs};
 ? my $pager    = $jobs->pager;
 
